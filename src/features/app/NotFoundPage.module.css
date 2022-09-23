@@ -1,0 +1,27 @@
+.notFoundPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2.5rem;
+  background-size: cover;
+  height: 100vh;
+}
+
+.notFoundPage > h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px var(--primary-color);
+}
+
+.notFoundPage > a {
+  margin-top: 20px;
+}
+
+/* SM BREAKPOINT */
+@media (min-width: 640px) {
+  .notFoundPage {
+    padding: 6rem;
+  }
+}

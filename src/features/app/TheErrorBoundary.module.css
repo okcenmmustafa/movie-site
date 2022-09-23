@@ -1,0 +1,43 @@
+.errorBoundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.errorBoundary a {
+  color: white;
+}
+
+.errorBoundary > div {
+  padding: 2.5rem;
+  text-align: center;
+  color: white;
+  background: var(--base-500);
+  border-radius: var(--rounded-md);
+}
+
+.errorBoundary h3 {
+  font-size: 1.125rem;
+}
+
+.errorBoundaryButton {
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0.75rem;
+  display: block;
+  border-radius: var(--rounded-md);
+}
+
+.errorBoundaryButton:focus {
+  outline: none;
+}
+
+.errorBoundaryButtonPink {
+  background-image: linear-gradient(to left, var(--primary-color), var(--tertiary-color));
+}
+
+.errorBoundaryButtonBlue {
+  background-image: linear-gradient(to left, var(--secondary-color), var(--secondary-color));
+}
