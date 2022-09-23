@@ -1,6 +1,5 @@
 import Homepage from "features/homepage";
 import AppTemplate from "features/templates/AppTemplate";
-import FadeInTemplate from "features/templates/FadeInTemplate";
 import request from "utilities/request";
 
 export async function getStaticProps() {
@@ -29,9 +28,7 @@ export async function getStaticProps() {
 export default function HomePageNext({ movieList }) {
   return (
     <AppTemplate>
-      <FadeInTemplate>
         <Homepage movieList={movieList} />
-      </FadeInTemplate>
     </AppTemplate>
   );
 }

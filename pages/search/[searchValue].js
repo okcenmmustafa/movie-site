@@ -1,7 +1,5 @@
 import Homepage from "features/homepage";
 import AppTemplate from "features/templates/AppTemplate";
-import FadeInTemplate from "features/templates/FadeInTemplate";
-import { useEffect } from "react";
 
 import request from "utilities/request";
 
@@ -40,9 +38,7 @@ export async function getStaticProps({ params }) {
 export default function HomePageNext({ movieList }) {
   return (
     <AppTemplate>
-      <FadeInTemplate>
         <Homepage movieList={movieList} />
-      </FadeInTemplate>
     </AppTemplate>
   );
 }
