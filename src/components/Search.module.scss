@@ -1,0 +1,65 @@
+//** variables
+$background: #f5f6fa;
+$text: #000000;
+$input-bg-color: #fff;
+$input-text-color: #000000;
+$button-bg-color: #ffffff;
+$button-text-color: rgb(0, 0, 0);
+
+//** helper
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+//** button
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+
+  &Primary {
+    background: $button-bg-color;
+    color: $button-text-color;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 5px 36px;
+
+    &:hover {
+      background: darken($button-bg-color, 4%);
+    }
+
+    &:active {
+      background: $button-bg-color;
+      box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &Inside {
+    margin-left: -96px;
+  }
+}
+
+//** form
+.searchBox {
+  width: 360px;
+  background: #fff;
+  color: $input-text-color;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 1px 18px;
+}

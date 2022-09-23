@@ -1,0 +1,22 @@
+.tapbarContainer {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  width: 100%;
+  background-color: #84f1c4;
+  padding: 1rem;
+  z-index: 20;
+}
+
+.nav {
+  font-size: 1.5rem;
+  line-height: 100%;
+  color: black;
+  font-weight: bold;
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+.search {
+  margin-left: 5rem;
+}

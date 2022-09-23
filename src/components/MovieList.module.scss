@@ -1,0 +1,18 @@
+.movieListContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+  .movieListContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .movieListContainer {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,93 @@
+@import "_variables.css";
+/* Keep utilities last as they are supposed to override anything */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-color);
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: var(--scrollbar-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+}
+
+#root {
+  min-height: stretch;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  font-weight: var(--text-normal);
+  overflow: overlay;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: var(--line-height);
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.default-hr {
+  mask-image: linear-gradient(to right, transparent, black, transparent);
+  width: 100%;
+  margin: 2.5rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 375px) {
+  :root {
+    --navigation-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  :root {
+    --navigation-width: 60%;
+  }
+}
+
+@media only screen and (min-width: 525px) {
+  :root {
+    --navigation-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  :root {
+    --navigation-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+  :root {
+    --navigation-width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  :root {
+    --navigation-width: 300px;
+  }
+
+}
+
+@media only screen and (min-width: 1367px) {
+  :root {
+    --navigation-width: 300px;
+  }
+}
+
+
