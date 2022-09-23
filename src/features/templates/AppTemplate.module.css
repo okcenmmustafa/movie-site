@@ -1,0 +1,12 @@
+.mainComponent {
+  padding: 8rem 0rem;
+}
+/* LG - BREAKPOINT */
+@media (min-width: 1024px) {
+  .appTemplate > main {
+    width: auto;
+  }
+  .mainComponent {
+    padding: 8rem 3rem;
+  }
+}
