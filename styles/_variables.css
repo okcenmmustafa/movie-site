@@ -1,0 +1,29 @@
+:root {
+  /* Base colors */
+  --base-100: #edf7fc;
+  --base-200: #dcf0fa;
+  --base-300: #b9e2f5;
+  --base-400: #84cdee;
+  --base-500: #50b8e7;
+
+
+
+  --text-color: #bbbdd9;
+  --background-color: hsl(233, 34%, 15%);
+  --scrollbar-thumb-color: #ffffff;
+  --scrollbar-color: #313661;
+
+  /* Font weights */
+  --text-thin: 100;
+  --text-normal: 400;
+  --text-bold: 700;
+
+  /* Spacing */
+
+  /* Rounded edges */
+  --rounded-lg: 0.5rem;
+
+  /* Navigation */
+  --navigation-width: 90%;
+
+}
