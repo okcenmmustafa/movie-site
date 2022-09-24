@@ -7,17 +7,6 @@
   width: 100%;
   z-index: 99;
   position: fixed;
-  background: linear-gradient(
-    0deg,
-    var(--background-color),
-    var(--background-color-2)
-  );
 }
 
-@media (min-width: 1024px) {
-  .loader {
-    padding-top: 0;
-    width: calc(100vw - var(--navigation-width));
-    margin-left: var(--navigation-width);
-  }
-}
+
