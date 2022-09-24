@@ -1,12 +1,75 @@
 .detailsContainer {
   width: 100%;
   text-align: left;
-  padding: 6rem 1rem ;
+  padding: 3.5rem 1rem ;
 }
 .movieDetails {
   display: grid;
   grid-template-columns: 1fr
 }
+
+.container {
+  overflow: hidden;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  min-height: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  span{
+    display: grid;
+    color: var(--base-500);
+    span{
+      color: var(--text-color);
+    }
+  }
+}
+.watchNow{
+  margin: 2rem 0 ;
+  place-self: center;
+  background-color: var(--watch-button-bg);
+  color: var(--text-color-dark);
+  padding: .5rem 2rem;
+  box-shadow: 0 1px 1px var(--watch-button-bg), 
+  var(--watch-button-bg), 
+  var(--watch-button-bg);
+  border-radius: var(--rounded-lg);
+  cursor: pointer;
+
+}
+.overview{
+  padding: 2rem;
+}
+
+
+
+
+.posterContainer {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.poster {
+  aspect-ratio: 215 / 322 !important;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.similarMovies{
+  text-align: center;
+  padding: 2rem 0;
+}
+
 
 @media only screen and (max-width: 380px) {
   .container {
@@ -25,144 +88,8 @@
     flex: 0 0 calc(33.333% - 20px);
   }
 }
-.container {
-  overflow: hidden;
-  display: grid;
-  flex-direction: column;
-  grid-template-columns: 1fr;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  min-height: auto;
-  box-sizing: border-box;
-  position: relative;
-}
-.details{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
-  span{
-    display: grid;
-    color: #50e7a8;
-    span{
-      color: #fff;
-    }
-  }
-}
-.watchNow{
-  margin: 1rem 0 ;
-  place-self: center;
-  background-color: #ffffff;
-  color: #000;
-  padding: .5rem;
-  box-shadow: 0 1px 1px #ffffff, 
-  0 2px 2px #ffffff, 
-  0 4px 4px #ffffff;
-  border-radius: var(--rounded-lg);
 
-}
-.overview{
-  padding: 2rem;
-}
-.movieTitleContainer {
-  pointer-events: none;
-  padding: 0;
-  margin: 0;
-  bottom: 8px;
-  width: 100%;
-  padding: 8px;
-  z-index: 2;
-}
-.movieTitle {
-  display: block;
-  position: relative;
-  color: #50e7a8;
-  font-size: 0.7rem;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  width: 80%;
-  text-decoration: none;
-  transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
 
-.categories {
-  display: block;
-  color: #fff;
-  font-size: 0.5rem;
-  background: rgb(17, 87, 123);
-  border-radius: var(--rounded-lg);
-  pointer-events: none;
-  padding: 2px 5px;
-  margin: 3px;
-  font-weight: 400;
-}
-
-.uhd {
-  display: block;
-  right: 0;
-  background: #f4c200;
-  font-size: 0.4rem;
-  color: #000;
-  padding: 3px 8px;
-  margin: 3px;
-  border-radius: var(--rounded-lg);
-}
-
-.imdb {
-  display: block;
-  font-size: 0.4rem;
-  background: rgba(181, 144, 0, 0.6);
-  top: 28px;
-  right: 3px;
-  color: #fff;
-  border-radius: var(--rounded-lg);
-  padding: 5px;
-}
-
-.releaseDate {
-  right: 10px;
-  bottom: 10px;
-  font-size: 0.4rem;
-  border-radius: var(--rounded-lg);
-  display: block;
-  color: #fff;
-  z-index: 3;
-}
-
-.posterContainer {
-  width: 100%;
-  height: auto;
-  pointer-events: none;
-}
-
-.poster {
-  aspect-ratio: 215 / 322 !important;
-  display: block;
-  width: 100%;
-  height: auto;
-  pointer-events: none;
-}
-
-@media only screen and (min-width: 420px) {
-  .movieTitle {
-    font-size: 1rem;
-    padding: 6px;
-  }
-  .categories {
-    font-size: 0.6rem;
-    margin: 6px;
-  }
-  .uhd {
-    font-size: 0.6rem;
-  }
-  .imdb {
-    font-size: 0.6rem;
-  }
-
-  .releaseDate {
-    font-size: 0.6rem;
-  }
-}
 @media only screen and (min-width: 640px) {
   .detailsContainer {
     padding: 6rem;
@@ -178,26 +105,9 @@
     display: grid;
     grid-template-columns: 0.4fr 1fr;
   }
- 
-}
-@media only screen and (min-width: 1200px) {
-  .movieTitle {
-    font-size: 1.3rem;
-    padding: 8px;
-  }
-  .categories {
-    font-size: 0.8rem;
-    margin: 8px;
-  }
-  .uhd {
-    font-size: 1.2rem;
-  }
-  .imdb {
-    top: 55px;
-    font-size: 0.8rem;
-  }
+  .watchNow{
+  padding: 1rem 10rem;
 
-  .releaseDate {
-    font-size: 0.8rem;
   }
+ 
 }

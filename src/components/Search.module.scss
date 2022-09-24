@@ -1,7 +1,4 @@
 //** variables
-$background: #f5f6fa;
-$text: #000000;
-$input-bg-color: #fff;
 $input-text-color: #000000;
 $button-bg-color: #ffffff;
 $button-text-color: rgb(0, 0, 0);
@@ -55,7 +52,6 @@ $button-text-color: rgb(0, 0, 0);
 //** form
 .searchBox {
   width: 90%;
-  background: #fff;
   color: $input-text-color;
   text-align: left;
   font: inherit;

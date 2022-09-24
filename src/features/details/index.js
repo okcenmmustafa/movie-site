@@ -26,28 +26,29 @@ const languages=movie.spoken_languages.map((language)=>
         <div className={styles.watchNow}> WATCH THE MOVIE NOW</div>
 
           <div className={styles.details}>
-            <span className={styles.movieTitleContainer}>
+            <span >
                Title  <span>{movie.title}</span>
             </span>
-            <span className={styles.movieTitleContainer}>
+            <span >
                Rating <span className={styles.info}>{movie.vote_average.toFixed(1)}</span>
-            </span>{" "}
-            <span className={styles.movieTitleContainer}>
+            </span>
+            <span >
                Release Date  <span className={styles.info}>{movie.release_date}</span>
-            </span>{" "}
-            <span className={styles.movieTitleContainer}>
+            </span>
+            <span >
                Genres  <span className={styles.info}>{genres}</span>
-            </span>{" "}
-            <span className={styles.movieTitleContainer}>
+            </span>
+            <span >
                Languages  <span className={styles.info}>{languages}</span>
-            </span>{" "}
-            <span className={styles.movieTitleContainer}>
+            </span>
+            <span >
                Status  <span className={styles.info}>{movie.status}</span>
             </span>{" "}
           </div>
         </div>
       </div>
       <div className={styles.overview}>{movie.overview}</div>
+      <h3 className={styles.similarMovies}>Similar Movies</h3>
       <MovieList movies={similarMovies}/>
     </div>
   );

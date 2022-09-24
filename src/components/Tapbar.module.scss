@@ -3,7 +3,7 @@
   position: fixed;
   flex-direction: row;
   width: 100%;
-  background-color: #84f1c4;
+  background-color: var(--base-500);
   padding: 0.25rem 1rem;
   z-index: 20;
 }
