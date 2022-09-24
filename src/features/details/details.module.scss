@@ -1,11 +1,11 @@
 .detailsContainer {
   width: 100%;
   text-align: left;
-  padding: 10rem;
+  padding: 6rem  ;
 }
 .movieDetails {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
+  grid-template-columns: 1fr
 }
 
 @media only screen and (max-width: 380px) {
@@ -36,7 +36,21 @@
   box-sizing: border-box;
   position: relative;
 }
-
+.details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  span{
+    display: grid;
+    color: #50e7a8;
+    span{
+      color: #fff;
+    }
+  }
+}
+.overview{
+  padding: 2rem;
+}
 .movieTitleContainer {
   pointer-events: none;
   padding: 0;
@@ -136,6 +150,20 @@
   .releaseDate {
     font-size: 0.6rem;
   }
+}
+@media only screen and (min-width: 640px) {
+  .movieDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+}
+@media only screen and (min-width: 1024px) {
+  .movieDetails {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+  }
+ 
 }
 @media only screen and (min-width: 1200px) {
   .movieTitle {

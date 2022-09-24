@@ -1,8 +1,16 @@
+import MovieList from "components/MovieList";
 import styles from "features/details/details.module.scss";
 const DetailPage = ({ movie, similarMovies }) => {
-  console.log(movie);
+  console.log(similarMovies)
+  const genres=movie.genres.map((genre)=>
+  <span>{genre.name}</span>
+)
+const languages=movie.spoken_languages.map((language)=>
+<span>{language.english_name}</span>
+)
+
   return (
-    <div className={styles.detailsContainer}>
+    <div className={styles.detailsContainer} >
       <div className={styles.movieDetails}>
         <div className={styles.posterContainer}>
           <img
@@ -17,32 +25,31 @@ const DetailPage = ({ movie, similarMovies }) => {
         <div className={styles.container}>
           <div className={styles.details}>
             <span className={styles.movieTitleContainer}>
-              Movie Title : {movie.title}
+               Title  <span>{movie.title}</span>
             </span>
             <span className={styles.movieTitleContainer}>
-              Movie Rating : {movie.vote_average}
+               Rating <span className={styles.info}>{movie.vote_average.toFixed(1)}</span>
             </span>{" "}
             <span className={styles.movieTitleContainer}>
-              Movie Release Date :{movie.release_date}
+               Release Date  <span className={styles.info}>{movie.release_date}</span>
             </span>{" "}
             <span className={styles.movieTitleContainer}>
-              Movie Title : {movie.title}
+               Genres  <span className={styles.info}>{genres}</span>
             </span>{" "}
             <span className={styles.movieTitleContainer}>
-              Movie Title : {movie.title}
+               Languages  <span className={styles.info}>{languages}</span>
             </span>{" "}
             <span className={styles.movieTitleContainer}>
-              Movie Title : {movie.title}
+               Status  <span className={styles.info}>{movie.status}</span>
             </span>{" "}
-            <span className={styles.movieTitleContainer}>
-              Movie Title : {movie.title}
-            </span>
+            
             <span className={styles.releaseDate}></span>
           </div>
-          <div>{movie.overview}</div>
-          <div></div>
+         
         </div>
       </div>
+      <div className={styles.overview}>{movie.overview}</div>
+      <MovieList movies={similarMovies}/>
     </div>
   );
 };
