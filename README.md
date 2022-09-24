@@ -8,7 +8,7 @@ run `yarn` or `npm install`
 run `yarn dev` or `npm run dev`
 
 
-NODE Version : `16.16.0`
+NODE Version : `16.17.0`
 
 #### Run the Project 
 
