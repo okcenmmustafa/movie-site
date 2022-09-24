@@ -151,7 +151,30 @@
     font-size: 0.6rem;
   }
 }
+
 @media only screen and (min-width: 1200px) {
+  .movieTitle {
+    font-size: .8rem;
+    padding: 8px;
+  }
+  .categories {
+    font-size: 0.8rem;
+    margin: 8px;
+  }
+  .uhd {
+    font-size: .7rem;
+    margin: 6px;
+  }
+  .imdb {
+    top: 55px;
+    font-size: 0.8rem;
+  }
+
+  .releaseDate {
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (min-width: 1500px) {
   .movieTitle {
     font-size: 1.3rem;
     padding: 8px;
@@ -165,10 +188,6 @@
   }
   .imdb {
     top: 55px;
-    font-size: 0.8rem;
-  }
-
-  .releaseDate {
     font-size: 0.8rem;
   }
 }

@@ -2,7 +2,6 @@ import styles from "./MovieCard.module.scss";
 import Link from "next/link";
 import playButton from "images/playButton.svg";
 function MovieCard({ movie, details = false }) {
-  console.log(movie);
   const releaseDate = movie.release_date?.slice(0, 4);
   return (
     <div className={styles.container}>
@@ -11,7 +10,7 @@ function MovieCard({ movie, details = false }) {
           <a className={styles.movieTitle}>{movie.title}</a>
         </Link>
       </h2>
-      <span className={styles.uhd}>{movie.vote_average}</span>{" "}
+      <span className={styles.uhd}>{movie.vote_average.toFixed(1)}</span>{" "}
       <span className={styles.releaseDate}>{releaseDate}</span>
       <a
         className={styles.titleYellow}
