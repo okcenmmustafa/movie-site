@@ -24,7 +24,6 @@ const Homepage = ({ movieList, search }) => {
     }
   };
   useEffect(async () => {
-    console.log(searchQuery);
     setMovies(movieList.results);
     if (searchQuery) {
       (async () => {
