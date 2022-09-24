@@ -21,7 +21,7 @@ const Chart = ({ topRated }) => {
     DrawChart(sample, dimensions);
   }, []);
 
-  const margin = { top: 50, right: 0, bottom: 200, left: 40 };
+  const margin = { top: 50, right: 0, bottom: 200, left: 60 };
   function DrawChart(data, dimensions) {
     const chartwidth =
       parseInt(d3.select("#chart").style("width")) - margin.left - margin.right;
@@ -71,7 +71,7 @@ const Chart = ({ topRated }) => {
     svg
       .append("g")
       .attr("id", "secondAxis")
-      .attr("transform", "translate(" + margin.left + ",0)")
+      .attr("transform", "translate(" + 40 + ",0)")
       .call(d3.axisLeft(y2).ticks(10));
     svg.selectAll("g[id^=secondAxis]").selectAll("path").attr("stroke", "0");
     svg.selectAll("g[id^=secondAxis]").selectAll("line").attr("stroke", "0");
