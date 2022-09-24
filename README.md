@@ -28,3 +28,6 @@ Next.js gives you the best developer experience with all the features you need f
 
 Redux is a predictable state container for JavaScript apps.
 
+[Sass](https://sass-lang.com/documentation/)
+
+Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. 
