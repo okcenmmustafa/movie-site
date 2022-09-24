@@ -23,6 +23,8 @@ const languages=movie.spoken_languages.map((language)=>
           />
         </div>
         <div className={styles.container}>
+        <div className={styles.watchNow}> WATCH THE MOVIE NOW</div>
+
           <div className={styles.details}>
             <span className={styles.movieTitleContainer}>
                Title  <span>{movie.title}</span>
@@ -42,10 +44,7 @@ const languages=movie.spoken_languages.map((language)=>
             <span className={styles.movieTitleContainer}>
                Status  <span className={styles.info}>{movie.status}</span>
             </span>{" "}
-            
-            <span className={styles.releaseDate}></span>
           </div>
-         
         </div>
       </div>
       <div className={styles.overview}>{movie.overview}</div>
