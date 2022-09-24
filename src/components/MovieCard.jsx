@@ -5,17 +5,17 @@ function MovieCard({ movie, details = false }) {
   const releaseDate = movie.release_date?.slice(0, 4);
   return (
     <div className={styles.container}>
-      <h2 className={styles.movieTitleContainer}>
+      <h2 className={styles.movieTitleContainer} id="title">
         <Link href={`/details/${movie.id}`}>
           <a className={styles.movieTitle}>{movie.title}</a>
         </Link>
       </h2>
-      <span className={styles.uhd}>{movie.vote_average.toFixed(1)}</span>{" "}
+      <span className={styles.voteAvarage}>{movie.vote_average.toFixed(1)}</span>{" "}
       <span className={styles.releaseDate}>{releaseDate}</span>
+      <div className={styles.playButton}><img src={playButton.src}/></div>
       <a
-        className={styles.titleYellow}
+        className={styles.movieClick}
         href={`/details/${movie.id}`}
-        title="Filmi izle"
       />
       <div className={styles.posterContainer}>
         <img

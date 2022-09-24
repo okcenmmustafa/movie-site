@@ -1,20 +1,4 @@
-@media only screen and (max-width: 380px) {
-  .container {
-    min-height: 228px !important;
-  }
-}
 
-@media only screen and (max-width: 600px) {
-  .container {
-    flex: 0 0 calc(50% - 20px);
-    min-height: 250px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .container {
-    flex: 0 0 calc(33.333% - 20px);
-  }
-}
 .container {
   overflow: hidden;
   display: flex;
@@ -25,6 +9,21 @@
   min-height: auto;
   box-sizing: border-box;
   position: relative;
+  &:hover{
+    background: none;
+    .movieTitleContainer{
+      display: none;
+    }
+    .releaseDate{
+      display: none;
+    }
+    .voteAvarage{
+      display: none;
+    }
+    .playButton{
+      display: block;
+    }
+  }
 }
 
 .movieTitleContainer {
@@ -50,20 +49,8 @@
   transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.categories {
-  display: block;
-  position: absolute;
-  color: #fff;
-  font-size: 0.5rem;
-  background: rgb(17, 87, 123);
-  border-radius: var(--rounded-lg);
-  pointer-events: none;
-  padding: 2px 5px;
-  margin: 3px;
-  font-weight: 400;
-}
 
-.uhd {
+.voteAvarage {
   display: block;
   position: absolute;
   right: 0;
@@ -75,17 +62,6 @@
   border-radius: var(--rounded-lg);
 }
 
-.imdb {
-  display: block;
-  position: absolute;
-  font-size: 0.4rem;
-  background: rgba(181, 144, 0, 0.6);
-  top: 28px;
-  right: 3px;
-  color: #fff;
-  border-radius: var(--rounded-lg);
-  padding: 5px;
-}
 
 .releaseDate {
   right: 10px;
@@ -97,8 +73,15 @@
   color: #fff;
   z-index: 3;
 }
-
-.titleYellow {
+.playButton{
+  display: none;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 40%;
+  left: 30%;
+}
+.movieClick {
   transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
   display: block;
   position: absolute;
@@ -113,9 +96,11 @@
   box-sizing: border-box;
   padding-left: 12px;
   padding-right: 12px;
-  z-index: 1 !important;
   bottom: 0;
   text-decoration: none;
+  &:hover{
+    background: none;
+  }
 }
 .posterContainer {
   width: 100%;
@@ -131,25 +116,39 @@
   pointer-events: none;
 }
 
+@media only screen and (max-width: 380px) {
+  .container {
+    min-height: 228px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex: 0 0 calc(50% - 20px);
+    min-height: 250px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    flex: 0 0 calc(33.333% - 20px);
+  }
+}
+
 @media only screen and (min-width: 420px) {
   .movieTitle {
     font-size: 1rem;
     padding: 6px;
   }
-  .categories {
-    font-size: 0.6rem;
-    margin: 6px;
-  }
-  .uhd {
-    font-size: 0.6rem;
-  }
-  .imdb {
+  .voteAvarage {
     font-size: 0.6rem;
   }
 
   .releaseDate {
     font-size: 0.6rem;
   }
+
+  
+ 
 }
 
 @media only screen and (min-width: 1200px) {
@@ -157,18 +156,11 @@
     font-size: .8rem;
     padding: 8px;
   }
-  .categories {
-    font-size: 0.8rem;
-    margin: 8px;
-  }
-  .uhd {
+  .voteAvarage {
     font-size: .7rem;
     margin: 6px;
   }
-  .imdb {
-    top: 55px;
-    font-size: 0.8rem;
-  }
+
 
   .releaseDate {
     font-size: 0.6rem;
@@ -179,15 +171,7 @@
     font-size: 1.3rem;
     padding: 8px;
   }
-  .categories {
-    font-size: 0.8rem;
-    margin: 8px;
-  }
-  .uhd {
+  .voteAvarage {
     font-size: 1.2rem;
-  }
-  .imdb {
-    top: 55px;
-    font-size: 0.8rem;
   }
 }
