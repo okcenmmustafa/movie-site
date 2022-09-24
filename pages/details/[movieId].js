@@ -22,7 +22,7 @@ export async function getStaticProps({ params }) {
         },
       }
     );
-    const [movie, similarMovies] = [movieResponse.data, similarResponse.data];
+    const [movie, similarMovies] = [movieResponse.data, similarResponse.data.results];
     return {
       props: {
         movie: movie,
