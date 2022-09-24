@@ -17,7 +17,6 @@ const Search = () => {
   }
   return (
     <div className={styles.container}>
-      <div className={styles.container__item}>
         <input
           type="search"
           className={styles.searchBox}
@@ -37,7 +36,6 @@ const Search = () => {
             search
           </button>
         </Link>
-      </div>
     </div>
   );
 };

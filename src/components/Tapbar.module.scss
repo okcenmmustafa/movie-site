@@ -4,19 +4,50 @@
   flex-direction: row;
   width: 100%;
   background-color: #84f1c4;
-  padding: 1rem;
+  padding: 0.25rem 1rem;
   z-index: 20;
 }
 
 .nav {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 100%;
   color: black;
-  font-weight: bold;
-  margin-left: 5rem;
+  margin-right: 1rem;
+  align-self:center;
   cursor: pointer;
 }
 
-.search {
-  margin-left: 5rem;
+
+@media only screen and (min-width: 640px) {
+  .tapbarContainer{
+  padding: .5rem 1em;
+
+  }
+  .nav {
+    font-size: 1rem;
+  margin-right: 2rem;
+
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tapbarContainer{
+  padding: 1rem 2em;
+
+  }
+  .nav {
+    font-size: 1.5rem;
+  margin-right: 3rem;
+
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .tapbarContainer{
+  padding: .5rem 5em;
+
+  }
+  .nav {
+    font-size: 1.5rem;
+  margin-right: 5rem;
+
+  }
 }
