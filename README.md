@@ -1,16 +1,15 @@
 # movie-site
 
-Setup Project
+#### Setup Project
+run `yarn` or `npm install`
 
-run yarn or npm install
+#### Start Project 
 
-Start Project
+run `yarn dev` or `npm run dev`
 
-run yarn dev or npm run dev
 
-NODE Version : 16.16.0
+NODE Version : `16.16.0`
 
-Run the Project
+#### Run the Project 
 
-go to http://localhost:3000 link to see the project
-
+go to  http://localhost:3000 link to see the project
